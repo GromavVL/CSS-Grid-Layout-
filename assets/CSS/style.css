@@ -14,6 +14,8 @@ body {
 
 main {
     padding: 8px 16px;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 /* ********************************************************************************************************** */
@@ -246,12 +248,14 @@ main {
 
 /* ******************************************** */
 .bg {
-    background-image: url(/assets/img/bg.jpg);
-    width: 100%;
-    height:  520px;
-    object-fit: cover;
+    background-image: url("../img/bg.jpg");
+    max-width: 1500px;
+    height:  700px;
     background-position: center;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 .bg h1 {
@@ -261,18 +265,27 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 24px;
+    font-size: 34px;
     text-shadow: 2px 2px 4px black;
 }
 
 .bg span {
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgba(0, 0, 0, 0.8); 
     padding: 10px;
 }
 /* ********************************************* */
 
 
 /* ************ Адаптивність **************** */
+
+@media screen and (max-width: 992px) {
+    .house-card {
+        grid-template-columns: repeat(2, 2fr);
+    }
+    .info-people {
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
 
 @media screen and (max-width: 600px) {
     .house-card {
@@ -285,12 +298,3 @@ main {
         display: none;
     }
 }
-
-/* @media screen and (max-width: 992px) {
-    .house-card {
-        grid-template-columns: 2fr;
-    }
-    .info-people {
-        grid-template-columns: 2fr;
-    }
-} */
