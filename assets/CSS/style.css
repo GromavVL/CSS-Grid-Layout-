@@ -242,3 +242,27 @@ main {
     max-width: 100%;
     margin-top: 20px;
 }
+
+
+/* ************ Адаптивність **************** */
+
+@media screen and (max-width: 600px) {
+    .house-card {
+        grid-template-columns: 1fr;
+    }
+    .info-people {
+        grid-template-columns: 1fr;
+    }
+    .navigatia {
+        display: none;
+    }
+}
+
+/* @media screen and (max-width: 992px) {
+    .house-card {
+        grid-template-columns: 2fr;
+    }
+    .info-people {
+        grid-template-columns: 2fr;
+    }
+} */
